@@ -1,82 +1,56 @@
-const div = document.getElementById('form')
-const username = document.getElementById('username')
-const email = document.getElementById('email')
-const password = document.getElementById('password')
-const passwordtwo = document.getElementById('password-two')
+const form = document.getElementById("form");
+const username = document.getElementById("username");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
 
-div.addEventListener('submit', (e) => {
-    e.preventDefault()
+form.addEventListener("submit", (e) => {
+ e.preventDefault();
 
-    checkInputs()
-})
+checkInputs();
+ });
 
 function checkInputs() {
+const usernameValue = username.value;
+const emailValue = email.value;
+const passwordValue = password.value;
 
-    const usernameValue = username.value.trim()
-    const emailValue = email.value.trim()
-    const passwordValue = password.value.trim()
-    const passwordtwoValue = passwordtwo.value.trim()
+if (usernameValue === "") {
+setErrorFor(username, "O nome de usuário é obrigatório.");
+} else {
+setSuccessFor(username);
+}
 
-    if(usernameValue == '') || username.value.length < 3 {
-        // mostrar erro
-        // add classe
-        alert( "Preencha campo Usuario corretamente!");
-        usernameValue.focus();
-        return false;
-    }
+if (emailValue === "") {
+alert("O email é obrigatório.");
+} else (!checkEmail(emailValue)) {
+alert("Por favor, insira um email válido.");
+} 
 
-    if(emailValue === '') {
-        // mostrar erro
-        // add classe
-        setErrorFor(email, 'Preencha Seu Email')
-    } else if (!isEmail(emailValue)) {
-        setErrorFor(email, 'Email inválido')
-    } else {
-        // adicionar a classe de sucesso
-        setSuccessFor(email)
-    }
-   
-    if(passwordValue === '') {
-        // mostrar erro
-        // add classe
-        setErrorFor(password, 'Preencha Sua Senha')
-
-    } else if(passwordValue.length < 8) { 
-        setErrorFor(password, 'Senha deve ter mais que 8 caracteres')
-    } else {
-        // adicionar a classe de sucesso
-        setSuccessFor(password)
-    }
-
-    if(passwordtwoValue === '') {
-        // mostrar erro
-        // add classe
-        setErrorFor(passwordtwo, 'Confirme Sua Senha')
-
-    } else if(passwordValue !== passwordtwoValue) { 
-        setErrorFor(passwordtwo, 'Senhas não tão iguais')
-    } else {
-        // adicionar a classe de sucesso
-        setSuccessFor(passwordtwo)
-    }
-
+if (passwordValue === "") {
+setErrorFor(password, "A senha é obrigatória.");
+} else if (passwordValue.length < 7) {
+setErrorFor(password, "A senha precisa ter no mínimo 7 caracteres.");
+} else {
+setSuccessFor(password);
 }
 
 function setErrorFor(input, message) {
-    const formControl = input.parentElement;
-    const small = formControl.querySelector('small')
+const formControl = input.parentElement;
+ const small = formControl.querySelector("small");
 
-    small.innerText = message
+Adiciona a mensagem de erro
+small.innerText = message;
 
-    formControl.className = 'form-control error'
+Adiciona a classe de erro
+formControl.className = "form-control error";
 }
 
 function setSuccessFor(input) {
-    const formControl = input.parentElement;
+ const formControl = input.parentElement;
 
-    formControl.className = 'form-control success'
-}
 
-function isEmail(email) {
-    return /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/.test(email)
+function checkEmail(email) {
+ return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+email
+);
 }
