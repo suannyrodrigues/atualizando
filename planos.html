@@ -1,29 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/planos.css">
-    <title>Document</title>
+    <title>CodeEnders - Planos</title>
 </head>
 <body>
+  
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 
     <header>
         <div id="title">
-       <img src="projeto-main-main - Copia/IMG/CODEE.png">
+        <img src="img/CODEE.png" alt="logo">
         </div>   
                 <ul>
-                <a href="index.html"><li>Home</li></a>
-                <a href="#"><li>Sobre Nós</li></a>
-                <a href="planos.html"><li>Planos</li></a>
-                <a href="cadastro.html"><li>Cadastro</li></a>
+                <a href="index.html"><li>Home |</li></a>
+                <a href="card.html"><li>Contato |</li></a>
+                <a href="#"><li>Comunidade |</li></a>
+                <a href="#"><li>Sobre nós |</li></a>
+                <a href="planos.html"><li>Planos |</li></a>
+                <a href="cadastro.html"><li>Cadastro|</li></a>
                 <a href="login.html"><li>Login</li></a>
         
             </ul>
         </header>
+        <hr>
 
     <div class="gallery">
         <div class="content">
@@ -40,7 +52,7 @@
           <small>Aulas 100% praticas</small>
           <br>
           <br>
-          <button><a href='cadastro.html'>comprar</a></button>
+          <button><a href='cadastro.html'>Comprar</a></button>
         </div>
         <div class="content">
           <h3>CSS</h3>
@@ -75,74 +87,10 @@
           <button><a href='cadastro.html'>Comprar</a></button>
         </div>
       </div>
-      <footer class="bg-light text-center text-white">
-        <!-- Grid container -->
-        <div class="container p-4 pb-0">
-          <!-- Section: Social media -->
-          <section class="mb-4">
-            <!-- Facebook -->
-            <a
-              class="btn text-white btn-floating m-1"
-              style="background-color: #3b5998;"
-              href="#!"
-              role="button"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-      
-            <!-- Twitter -->
-            <a
-              class="btn text-white btn-floating m-1"
-              style="background-color: #55acee;"
-              href="#!"
-              role="button"
-              ><i class="fab fa-twitter"></i
-            ></a>
-      
-            <!-- Google -->
-            <a
-              class="btn text-white btn-floating m-1"
-              style="background-color: #dd4b39;"
-              href="#!"
-              role="button"
-              ><i class="fab fa-google"></i
-            ></a>
-      
-            <!-- Instagram -->
-            <a
-              class="btn text-white btn-floating m-1"
-              style="background-color: #ac2bac;"
-              href="#!"
-              role="button"
-              ><i class="fab fa-instagram"></i
-            ></a>
-      
-            <!-- Linkedin -->
-            <a
-              class="btn text-white btn-floating m-1"
-              style="background-color: #0082ca;"
-              href="#!"
-              role="button"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-            <!-- Github -->
-            <a
-              class="btn text-white btn-floating m-1"
-              style="background-color: #333333;"
-              href="#!"
-              role="button"
-              ><i class="fab fa-github"></i
-            ></a>
-          </section>
-          <!-- Section: Social media -->
-        </div>
-        <!-- Grid container -->
-      
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-          © 2020 Copyright:
-          <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-        </div>
-        <!-- Copyright -->
-      </footer>
+      <hr>
+<footer>
+    © Copyright 2022 - The Frontenders
+</footer>
+
 </body>
 </html>

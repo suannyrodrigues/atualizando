@@ -2,7 +2,7 @@ body{
     background-color: black;
     color: white;
     font-family: 'Josefin Sans', sans-serif;
-    margin: 0 auto;
+    margin: 0;
     padding: 15px;
 }
 header{
@@ -12,20 +12,23 @@ header{
     align-items: center;
 }
 
+.logo{
+    width: 110px;
+}
+
+
 ul{
-
-    margin-right: 11%;
+    display: contents;
+    margin: 6px;
+    margin-inline: .1%;
+    margin-left: .2%;
 }
 
-#title{
-    margin-left: 11%;
-    flex-direction: column;
-    line-height: 10px;
-}
 
 li{
     display: inline-block;
-    margin: 20px;
+    font-weight: bold;
+    width: 100%;
 }
 
 
@@ -66,7 +69,13 @@ a:hover{
 p{
     line-height: 20px;
 }
+
+
 @media screen and (max-width: 760px){
+
+    body{
+        margin: auto;
+    }
 
     header{
         flex-direction: column;
@@ -75,6 +84,14 @@ p{
     main{
         flex-direction: column;
     }
+
+    div.left-login h1{
+        display: inline-block;
+        font-size: larger;
+        text-align: center;
+        font-weight: 900;
+    }
+
 
     h2{
         font-size: 38px;
@@ -89,17 +106,28 @@ p{
         align-self: center;
     }
 
-    img{
-        display: none;
+    .logo{
+        display: inline-block;
     }
 
     ul{
-        text-align: end;
+        display: inline-block;
+
     }
+
+    li{
+        
+        display: table-cell;
+
+    }
+
 }
-footer{
+
+ footer{
     text-align: center;
   }
+
+
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
@@ -135,7 +163,7 @@ body{
 }
 
 .left-login > h1{
-    color:#d36a09;
+    color: rgb(241, 81, 23);
     font-size: 3vw;
 
 
@@ -162,7 +190,7 @@ body{
     align-items: center;
     flex-direction: column;
     padding: 30px 35px;
-    background: #d36a09;
+    background: rgb(241, 81, 23) ;
     border-radius: 20px;
     box-shadow: 0px 10px 40px #00000056;
 }
@@ -229,7 +257,7 @@ body{
 }
 
 .btn-login:hover{
-    color:#fff;
+    color:rgb(241, 81, 23);
 }
 
 .menu li a{
@@ -242,7 +270,7 @@ body{
 .menu{
     text-align: center;
     border: 1px solid black;
-    background: #d36a09;
+    background:  rgb(241, 81, 23);
     font-style: oblique;
     font-size: 25px;
     padding: 20px 50px 20px 80px;
@@ -270,13 +298,13 @@ body{
 
 .clear a:link{
     color: #201b2c;
-    background-color: #d36a09;
+    background-color: rgb(241, 81, 23);
 }
 
 
 .clear a:hover{
     color: #201b2c;
-    background-color: #d36a09;
+    background-color: rgb(241, 81, 23);
 }
 
 

@@ -37,8 +37,11 @@ main{
 }
 
 ul{
-margin-left: .2rem;
-text-align: center;
+    display: contents;
+    font-weight: bold;
+    margin: 6px;
+    margin-inline: .1%;
+    margin-left: .2%;
 
 }
 
@@ -75,7 +78,9 @@ input{
     border-radius: 20px;
     
 }
-
+footer{
+    text-align: center;
+}
 button{
     text-align: center;
     align-items: center;
@@ -118,6 +123,7 @@ button{
 }
 
 form{
+margin-top: 4%;
 text-align: center;
 align-items: center;
 
@@ -140,6 +146,6 @@ h1{
     margin-top: 5%;
 }
 button{
- margin-top: 2%;
- width: 40%;
+    margin-top: 2%;
+    width: 40%;
 }

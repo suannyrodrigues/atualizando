@@ -38,10 +38,10 @@ function setErrorFor(input, message) {
 const formControl = input.parentElement;
  const small = formControl.querySelector("small");
 
-Adiciona a mensagem de erro
+///Adiciona a mensagem de erro
 small.innerText = message;
 
-Adiciona a classe de erro
+///Adiciona a classe de erro
 formControl.className = "form-control error";
 }
 

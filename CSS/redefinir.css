@@ -14,14 +14,20 @@ header{
     align-items: center;
 }
 
-#title{
-    flex-direction: column;
-    line-height: 10px;
+div#title img{
+    height: auto;
+    width: 110px;
 }
+
+ul{
+    display: contents;
+}
+
 
 li{
     display: inline-block;
     margin: 20px;
+    font-weight: bold;
 }
 
 
@@ -55,8 +61,12 @@ a{
 }
 
 a:hover{
-    color: rgb(241, 81, 23);
+    color: #201b2c;
     transition: 0.3s all;
+}
+
+li:hover{
+    color: rgb(241, 81, 23 );
 }
 
 p{
@@ -84,6 +94,9 @@ button{
     background-color: rgb(241, 81, 23);
     border-radius: 50px;
 }
+button a{
+    text-decoration: none;
+}
 
 @media screen and (max-width: 760px){
 
@@ -108,12 +121,23 @@ button{
         align-self: center;
     }
 
+    input.inputUser{
+        width: 95%;
+    }
+
     img{
-        display: none;
+        display: inline-block;
+        margin-inline: 10%;
+    }
+
+    li{
+        display: inline-block;
     }
 
     ul{
         text-align: center;
+        display: inline-block;
+        width: 100%
     }
 }
 footer{
@@ -136,15 +160,15 @@ footer{
 
 }     
 fieldset{
-    margin-top: 15%;
-border: 3px solid #d36a09;
+    margin-top: 8%;
+    border: 3px solid rgb(241, 81, 23);
 
 }
 legend{
 border: 3px solid #201b2c;
 padding: 10px;
 text-align: center;
-background-color: #d36a09;
+background-color: rgb(241, 81, 23);
 border-radius: 8px;
 
 }
@@ -181,7 +205,7 @@ transition: .5px;
 
 top: -20px;
 font-size: 12px;
-color: #d36a09;
+color: rgb(241, 81, 23);
 
 }
 
@@ -198,7 +222,7 @@ border-radius: 10px;
 }
 
 .info:hover{
-background-image:linear-gradient(to right,rgb(138, 84, 4), rgb(216, 132, 6));
+background-image:linear-gradient(to right, rgb(241, 81, 23), rgb(241, 81, 23));
 
 }
 

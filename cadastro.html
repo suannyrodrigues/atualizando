@@ -2,10 +2,21 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/cadastro.css">
     <title>Formulário</title>
 </head>
 <body>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 
   <header>
     <div id="title">
@@ -13,14 +24,16 @@
 
     </div>   
             <ul>
-            <a href="index.html"><li>Home</li></a>
-            <a href="#"><li>Sobre Nós</li></a>
-            <a href="planos.html"><li>Planos</li></a>
-            <a href="cadastro.html"><li>Cadastro</li></a>
+            <a href="index.html"><li>Home |</li></a>
+            <a href="#"><li>Sobre Nós |</li></a>
+            <a href="planos.html"><li>Planos |</li></a>
+            <a href="cadastro.html"><li>Cadastro |</li></a>
             <a href="login.html"><li>Login</li></a>
     
         </ul>
     </header>
+    
+    <hr>
 
   <h1>Faça seu Cadastro</h1>
   <p>entre na nossa fila de espera</p>
@@ -63,5 +76,10 @@
 
   <script type="text/javascript" src="script/cep.js"></script>
   
+  <hr>
+<footer>
+    © Copyright 2022 - The Frontenders
+</footer>
+
 </body>
 </html>
